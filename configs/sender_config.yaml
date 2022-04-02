@@ -1,0 +1,7 @@
+logger:
+  level: "INFO"
+mq:
+  uri: amqp://guest:guest@localhost:5672/
+  exchange: calendar
+  key: alerts
+  queue: alerts

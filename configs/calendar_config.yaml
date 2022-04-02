@@ -1,0 +1,10 @@
+http:
+  host: localhost
+  port: 4200
+grpc:
+  host: localhost
+  port: 4300
+logger:
+  level: "INFO"
+storage:
+  kind: "pgsql"   # supported storage types: in-memory, pgsql

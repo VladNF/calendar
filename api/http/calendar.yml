@@ -1,0 +1,169 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Calendar App
+  description: Yet another calendar app
+servers:
+  - url: https://{hostname}/api
+    variables:
+      hostname:
+        default: localhost
+paths:
+  /calendar/events/{id}:
+    get:
+      operationId: getEvent
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+        '404':
+          description: not found
+        '5XX':
+          description: unexpected error
+    put:
+      operationId: putEvent
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+        '400':
+          description: bad request
+        '404':
+          description: not found
+        '5XX':
+          description: unexpected error
+    delete:
+      operationId: deleteEvent
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+            format: uuid
+          required: true
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: not found
+        '5XX':
+          description: unexpected error
+
+  /calendar/events/:
+    get:
+      operationId: listEvents
+      parameters:
+        - in: query
+          name: agenda
+          required: true
+          schema:
+            type: string
+            enum: [ daily, weekly, monthly ]
+        - in: query
+          name: start_from
+          required: true
+          schema:
+            type: string
+            format: date-time
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Event'
+        '400':
+          description: bad request
+        '5XX':
+          description: unexpected error
+
+    post:
+      operationId: createEvent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+        '400':
+          description: bad request
+        '5XX':
+          description: unexpected error
+
+components:
+  schemas:
+    Event:
+      type: object
+      required: [ id, title, starts_at, ends_at, notes, owner_id, alert_before ]
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        title:
+          type: string
+        starts_at:
+          type: string
+          format: date-time
+        ends_at:
+          type: string
+          format: date-time
+        notes:
+          type: string
+        owner_id:
+          type: string
+        alert_before:
+          type: integer
+          description: time interval in seconds before the start time
+
+    Alert:
+      type: object
+      required: [ ]
+      properties:
+        id:
+          type: string
+          format: uuid
+          readOnly: true
+        event_id:
+          type: string
+          format: uuid
+        title:
+          type: string
+        starts_at:
+          type: string
+          format: date-time
+        addressee:
+          type: string

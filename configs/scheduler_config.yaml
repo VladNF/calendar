@@ -1,0 +1,10 @@
+logger:
+  level: "INFO"
+mq:
+  uri: amqp://guest:guest@localhost:5672/
+  exchange: calendar
+  key: alerts
+notice_days: 0
+schedule_period: 1
+storage:
+  kind: "pgsql"   # supported storage types: in-memory, pgsql
