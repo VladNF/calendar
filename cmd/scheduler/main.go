@@ -9,11 +9,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/app"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/common"
-	m "github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/models"
-	q "github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/queue"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/storage"
+	"github.com/VladNF/calendar/internal/app"
+	"github.com/VladNF/calendar/internal/common"
+	m "github.com/VladNF/calendar/internal/models"
+	q "github.com/VladNF/calendar/internal/queue"
+	"github.com/VladNF/calendar/internal/storage"
 )
 
 var configFile string

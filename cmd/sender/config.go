@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	c "github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/common"
+	c "github.com/VladNF/calendar/internal/common"
 	"github.com/spf13/viper"
 )
 

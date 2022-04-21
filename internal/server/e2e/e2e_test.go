@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/server/http/gen"
+	"github.com/VladNF/calendar/internal/server/http/gen"
 	"github.com/stretchr/testify/require"
 )
 

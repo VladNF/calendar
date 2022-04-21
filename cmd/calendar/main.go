@@ -8,11 +8,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/app"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/common"
-	servergrpc "github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/server/grpc"
-	serverhttp "github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/server/http"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/storage"
+	"github.com/VladNF/calendar/internal/app"
+	"github.com/VladNF/calendar/internal/common"
+	servergrpc "github.com/VladNF/calendar/internal/server/grpc"
+	serverhttp "github.com/VladNF/calendar/internal/server/http"
+	"github.com/VladNF/calendar/internal/storage"
 )
 
 var configFile string

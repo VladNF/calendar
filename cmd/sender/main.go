@@ -8,8 +8,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/common"
-	q "github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/queue"
+	"github.com/VladNF/calendar/internal/common"
+	q "github.com/VladNF/calendar/internal/queue"
 )
 
 var configFile string

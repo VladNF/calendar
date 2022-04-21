@@ -1,4 +1,4 @@
-module github.com/VladNF/otus-golang/hw12_13_14_15_calendar
+module github.com/VladNF/calendar
 
 go 1.16
 

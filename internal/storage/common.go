@@ -3,9 +3,9 @@ package storage
 import (
 	"fmt"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/models"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/storage/mem"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/storage/pgsql"
+	"github.com/VladNF/calendar/internal/models"
+	"github.com/VladNF/calendar/internal/storage/mem"
+	"github.com/VladNF/calendar/internal/storage/pgsql"
 )
 
 func NewStorage(storageType string) (models.EventsRepo, error) {

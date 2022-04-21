@@ -8,11 +8,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/app"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/common"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/models"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/server/http/gen"
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/server/http/middleware"
+	"github.com/VladNF/calendar/internal/app"
+	"github.com/VladNF/calendar/internal/common"
+	"github.com/VladNF/calendar/internal/models"
+	"github.com/VladNF/calendar/internal/server/http/gen"
+	"github.com/VladNF/calendar/internal/server/http/middleware"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
 )

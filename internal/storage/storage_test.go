@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/models"
+	"github.com/VladNF/calendar/internal/models"
 	"github.com/stretchr/testify/require"
 )
 

@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/VladNF/otus-golang/hw12_13_14_15_calendar/internal/models"
+	"github.com/VladNF/calendar/internal/models"
 
 	// init driver.
 	_ "github.com/jackc/pgx/stdlib"
